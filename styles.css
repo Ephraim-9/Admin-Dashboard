@@ -55,18 +55,52 @@ h1 {
 }
 .page {
     display: grid;
-    grid-template-rows: 6% 14% 80%;
+    grid-template-rows: 20% 80%;
+}
+.header {
+    grid-row-start: 1;
+    padding: 1% 10%; 
 }
 .header-top {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr 1.5fr 4fr;
+    grid-row-start: 1;
     align-items: center;
 }
 .header-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-start: 2;
     align-items: center;
+}
+.left {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
 }
 .lain {
     height: 60px;
+}
+.content {
+    display: grid;
+    grid-row-start: 2;
+    grid-template-columns: 75% 25%;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 5% 95%;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    padding: 5%;
 }
