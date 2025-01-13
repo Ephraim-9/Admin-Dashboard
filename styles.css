@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-/*     outline: 1px solid red; */
  }
 
 html, body {
@@ -11,6 +10,8 @@ html, body {
 }
 img {
     padding: 2%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .container {
     display: grid;
@@ -19,11 +20,12 @@ img {
 }
 
 .sidebar {
-    background-color: rgb(0, 179, 255);
+    background-color: #1E90FF;
     display: grid;
     align-items: center;
     grid-template-rows: 10% 40% 20%;
     padding: 10%;
+    z-index: 2;
 }
 
 .sidebar h1,
@@ -66,12 +68,7 @@ h1 {
     grid-row-start: 1;
     padding: 1% 5%; 
     justify-content: space-between;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5); 
-}
-.header img {
-    border-radius: 50%;
-    object-fit: cover;
-}
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);}
 .header-top {
     display: grid;
     grid-template-columns: 75% 25%;
@@ -83,6 +80,9 @@ h1 {
     display: flex;
     justify-content: right;
 }
+.htr :first-child {
+    padding: 5%;   
+}
 .htr * {
     margin-left: 5%;
 }
@@ -90,17 +90,16 @@ h1 {
     align-content: center;
 }
 .header-top .input {
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    padding: 1% 2%;
+    height: 40%;
+    width: 80%;
+    align-self: center;
     position: relative;
-    left: 10px;
     outline: none;
-    border: 1px solid #cdcdcd;
-    border-color: rgba(0,0,0,.15);
+    border-color: transparent;
     border-radius: 100px;
-    background-color: white;
-    font-size: 16px;
+    background-color: #cdcdcd;
+    font-size: 1rem;
 }
 .header-bottom {
     display: grid;
@@ -124,18 +123,18 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    padding: 5% 0;
+    padding: 2% 0;
 }
 .right button {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 50px; /* Round shape */
+    background-color: #3f9dfa; 
+    color: white;
+    border: none; 
+    border-radius: 50px;
     margin: 0 5%;
-    font-size: 1rem; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .greet-user {
     margin-left: 3%;
@@ -148,7 +147,7 @@ h1 {
     padding: 0 1.6%;
     display: grid;
     grid-template-rows: 7% 93%;
-    background-color: #cdcdcd;
+    background-color: #eeeded7a;
 }
 .titles {
     display: grid;
@@ -160,12 +159,12 @@ h1 {
 }
 .projects {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
+    padding-bottom: 3%;
 }
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 3%;
     gap: 5%;
     margin-right: 5%;
 }
@@ -177,8 +176,16 @@ h1 {
     grid-template-rows: 80% 20%;
     padding: 10% 5%;
     border-radius: 15px;
-    border-left: 10px solid rgb(255, 238, 0);
+    border-left: 10px solid #fff06a;
     
+}
+.card,
+.annc,
+.trending {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.card h3 {
+    margin-bottom: 2%;
 }
 .text {
     font-size: 1.15rem;
@@ -188,7 +195,7 @@ h1 {
     justify-content: end;
 }
 .card-icons > * {
-    margin: 0 1% 0 3%;
+    margin: 1% 3%;
 }
 .card-icons img {
     padding: 0;
@@ -196,8 +203,50 @@ h1 {
 .misc {
     grid-column-start: 2;
     grid-row-start: 1;
+    display: grid;
+    grid-template-rows: 47% 6% 47%;
+}
+.annc,
+.trending {
+    border: none;
+}
+.annc > :nth-child(2) {
+    border-top: 1px solid rgba(0, 0, 0, 0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.ann {
+    padding: 5% 0;
+}
+.ann h4 {
+    margin-bottom: 1%;
+}
+.annc {
+    display: grid;
+    grid-column-start: 1;
+    grid-template-rows: repeat(3, 33%);
+}
+.trndtitle {
+    display: flex;
+    align-items: end;
+    padding: 1%;
+    font-size: 1.17rem;
+}
+.trending {
+    display: flex;
+    flex-direction: column;
+    grid-row-start: 3;
+}
+.trndpost {
+    display: flex;
+}
+.trndpost:last-child img{
+    margin-bottom: none;
 }
 .trending img {
     width: 60px;
     aspect-ratio: 1/1;
+    margin: 2%;
+}
+.tpc {
+    align-content: center;
 }
