@@ -60,27 +60,85 @@ h1 {
 .header {
     grid-row-start: 1;
     padding: 1% 10%; 
+    justify-content: space-between;
+}
+.header img {
+    border-radius: 50%;
+    object-fit: cover;
 }
 .header-top {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr 1.5fr 4fr;
-    grid-row-start: 1;
-    align-items: center;
+    grid-template-columns: 75% 25%;
+}
+.htl {
+    display: flex;
+}
+.htr {
+    display: flex;
+    justify-content: right;
+}
+.htr * {
+    margin-left: 5%;
+}
+.htr > h3 {
+    align-content: center;
+}
+.htr > img {
+    width: 60px;
+    aspect-ratio: 1/1;
+}
+.header-top .input {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 10px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    border-radius: 100px;
+    background-color: white;
+    font-size: 16px;
 }
 .header-bottom {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 65% 35%;
     grid-row-start: 2;
     align-items: center;
+    height: 55%;
+}
+.header-bottom > * {
+    height: 100%;
 }
 .left {
-    display: grid;
-    grid-template-columns: 1fr 10fr;
+    display: flex;
+    align-items: center;
+}
+.left img {
+    height: 80px;
+    object-fit: cover;
 }
 .right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
+    padding: 10% 0;
+}
+.right button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Round shape */
+    padding: 15px 30px; /* Vertical and horizontal padding */
+    margin: 0 5%;
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.greet-user {
+    margin-left: 3%;
+    align-content: center;
 }
 .lain {
     height: 60px;
@@ -89,6 +147,7 @@ h1 {
     display: grid;
     grid-row-start: 2;
     grid-template-columns: 75% 25%;
+    background-color: rgba(151, 151, 151, 0.705);
 }
 
 .projects {
@@ -101,6 +160,7 @@ h1 {
 }
 .card {
     display: grid;
+    background-color: white;
     grid-template-rows: 90% 10%;
     padding: 5%;
 }
